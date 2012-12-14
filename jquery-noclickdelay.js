@@ -1,8 +1,8 @@
 (function() {
 
 // This code is only for iOS
-if (!window.navigator.userAgent.match(/(iPhone|iPad|iPod)/))
-    return;
+//if (!window.navigator.userAgent.match(/(iPhone|iPad|iPod)/))
+//    return;
 
 var CONFIG = { TOUCH_MOVE_THRESHHOLD: 10, PRESSED_CLASS: "pressed", GHOST_CLICK_TIMEOUT: 500, GHOST_CLICK_THRESHOLD: 10 }
 var clicks = [];
