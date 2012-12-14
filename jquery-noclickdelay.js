@@ -24,7 +24,7 @@ document.addEventListener('click', function(e) {
     }
 }, true);
 
-$(document).on('touchstart', '.button', function(e) {
+$(document).on('touchstart', '.no-click-delay', function(e) {
     var elem = $(this);
 
     // Disable the webkit tap highlight, since it is no longer accurate
@@ -49,13 +49,13 @@ $(document).on('touchstart', '.button', function(e) {
     $(document.body).on('touchmove', this.__onTouchMove);
 });
 
-$(document).on('touchcancel', '.button', function(e) {
+$(document).on('touchcancel', '.no-click-delay', function(e) {
     var elem = $(this);
     elem.removeClass(CONFIG.PRESSED_CLASS);
     $(document.body).off('touchmove', this.__onTouchMove);
 });
 
-$(document).on('touchend', '.button', function(e) {
+$(document).on('touchend', '.no-click-delay', function(e) {
     var elem = $(this);
     if (elem.hasClass(CONFIG.PRESSED_CLASS)) {
         elem.removeClass(CONFIG.PRESSED_CLASS);
